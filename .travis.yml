@@ -2,13 +2,11 @@
 language: python
 python: "2.7"
 
-# Use the new container infrastructure
 sudo: required
 
 services:
   - docker
 
-# Install ansible
 addons:
   apt:
     packages:
@@ -22,6 +20,9 @@ install:
   - ansible --version
 
   - ansible-galaxy install -r requirements.yml
+
+  # Create ansible.cfg with correct roles_path
+  - printf '[defaults]\nroles_path=../' >ansible.cfg
 
   - ansible-playbook travis_setup.yml -i tests/inventory
 
