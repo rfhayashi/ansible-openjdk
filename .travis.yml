@@ -24,7 +24,7 @@ install:
   # Create ansible.cfg with correct roles_path
   - printf '[defaults]\nroles_path=../' >ansible.cfg
 
-  - sudo ansible-playbook travis_setup.yml -i tests/inventory
+  - ansible-playbook travis_setup.yml -i tests/inventory
 
 script:
   # Basic role syntax check
