@@ -11,7 +11,7 @@ None.
 Role Variables
 --------------
 
-None.
+    openjdk8_version: 102
 
 Dependencies
 ------------

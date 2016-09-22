@@ -1,6 +1,7 @@
 galaxy_info:
   author: Rui Fernando Hayashi
   description: Ansible Role that installs the openjdk
+  company: rfhayashi
   license: MIT
   min_ansible_version: 1.2
   platforms:

@@ -1,4 +1,8 @@
 .idea
 *.iml
 .vagrant
+.kitchen
 roles
+roles.kitchen/
+.kitchen.local.yml
+Dockerfile-kitchen*

@@ -1,2 +1,2 @@
 ---
-# defaults file for ansible-openjdk
+openjdk8_version: 102
