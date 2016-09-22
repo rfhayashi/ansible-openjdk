@@ -24,7 +24,13 @@ install:
   # Create ansible.cfg with correct roles_path
   - printf '[defaults]\nroles_path=../' >ansible.cfg
 
-  - ansible-playbook travis_setup.yml -i tests/inventory
+  - wget chefdk_0.18.26-1_amd64.deb
+
+  - sudo dpkg -i chefdk_0.18.26-1_amd64.deb
+
+  - chef gem install kitchen-ansible --version=0.45.4
+
+  - chef gem install kitchen-docker --version=2.6.0
 
 script:
   # Basic role syntax check
